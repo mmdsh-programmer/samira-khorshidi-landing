@@ -1,0 +1,15 @@
+@import "../fonts/fonts";
+@font-face {
+    font-family: Voyage;
+    src: url(../fonts/Voyage-Regular.woff2) format("woff2"), url(../fonts/Voyage-Regular.woff) format("woff"),
+        url(../fonts/Voyage-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+$ipsMedium: "IBM Plex Sans", sans-serif;
+$ipsMediumThin: "IBM Plex Sans", sans-serif;
+$voyageMedium: Voyage;
+$headerNavbarColor: #616161;
+$footerColor: #333333;

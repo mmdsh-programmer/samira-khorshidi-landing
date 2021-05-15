@@ -1,0 +1,62 @@
+.landing-contact {
+    margin-top: 200px;
+    .container {
+        max-width: 1260px;
+    }
+    
+    .contact-description {
+        width: 633px;
+        font-size: 44px;
+        font-weight: 200;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #333333;
+    }
+}
+
+.contact-holder {
+    justify-content: space-between;
+
+    .contact-call {
+        width: 392px;
+        display: flex;
+        align-items: center;
+        a {
+            position: relative;
+            padding: 0 0 3px 10px;
+            width: 100%;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+            font-size: 36px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 0.97;
+            .first-line {
+                display: block;
+                margin-bottom: 9px;
+            }
+
+            &::before {
+                content: "";
+                z-index: -1;
+                bottom: 0;
+                left: 0;
+                position: absolute;
+                width: 193px;
+                height: 22px;
+                opacity: 0.38;
+                background-color: #ff5252;
+            }
+        }
+        .arrow-right {
+            width: 35px;
+            height: 35px;
+            vertical-align: bottom;
+            margin-left: 74px;
+        }
+    }
+}
