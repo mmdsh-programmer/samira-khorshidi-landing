@@ -231,7 +231,8 @@ function initPreload() {
   let showPercentage = document.getElementById("percentage");
   let indicator = document.getElementById("indicator");
   let viewport = document.getElementById("viewport");
-  let cont = { val: 0 }, newVal = 100;
+  let cont = { val: 0 },
+    newVal = 100;
   let isLoaded = false;
 
   TweenLite.to(cont, latency / 1000, {
@@ -246,7 +247,7 @@ function initPreload() {
     },
     onComplete: () => {
       let intervalId = window.setInterval(function () {
-        console.log("checking")
+        console.log("checking");
         if (isLoaded == true) {
           clearInterval(intervalId);
           runIntroAnimation();
@@ -258,14 +259,14 @@ function initPreload() {
           }, 500);
         }
       }, 10);
-    }
+    },
   });
 
   document.onreadystatechange = function () {
     if (document.readyState == "complete") {
       isLoaded = true;
     }
-  }
+  };
 }
 
 initPreload();
@@ -292,13 +293,16 @@ function runIntroAnimation() {
 
   //intro title animation
   function introTitleAnimation() {
-    const introTitleSplit = new SplitType('.intro-title', { types: 'words', lineClass: 'split-child' });
+    const introTitleSplit = new SplitType(".intro-title", {
+      types: "words",
+      lineClass: "split-child",
+    });
 
     const introTitleAnim = gsap.timeline();
 
     introTitleAnim.from(introTitleSplit.words, 1.8, {
       ease: "power4.out",
-      delay: 1.5,
+      delay: 0.3,
       y: 300,
       skewY: "10deg",
       stagger: {
@@ -310,7 +314,10 @@ function runIntroAnimation() {
   introTitleAnimation();
   //intro post title animation
   function introPostTitleAnimation() {
-    const introPostTitleSplit = new SplitType('.intro-sub-title', { types: 'lines', lineClass: 'split-child' });
+    const introPostTitleSplit = new SplitType(".intro-sub-title", {
+      types: "lines",
+      lineClass: "split-child",
+    });
 
     const introPostTitleAnim = gsap.timeline();
 
@@ -329,7 +336,10 @@ function runIntroAnimation() {
   //description intro animation
 
   function descriptionIntroAnimation() {
-    const descriptionSplit = new SplitType('.description', { types: 'lines', lineClass: 'split-child' });
+    const descriptionSplit = new SplitType(".description", {
+      types: "lines",
+      lineClass: "split-child",
+    });
 
     const descriptionAnim = gsap.timeline({ paused: true });
 
@@ -346,13 +356,16 @@ function runIntroAnimation() {
     ScrollTrigger.create({
       trigger: ".description",
       start: "bottom bottom",
-      animation: descriptionAnim
+      animation: descriptionAnim,
     });
   }
   descriptionIntroAnimation();
   //my works animation
   function myWorksIntroAnimation() {
-    const myWorksSplit = new SplitType('.work-inner-title span', { types: 'lines', lineClass: 'split-child' });
+    const myWorksSplit = new SplitType(".work-inner-title span", {
+      types: "lines",
+      lineClass: "split-child",
+    });
 
     const myWorksAnim = gsap.timeline({ paused: true });
 
@@ -367,14 +380,17 @@ function runIntroAnimation() {
     ScrollTrigger.create({
       trigger: ".work-inner-title",
       start: "top center",
-      animation: myWorksAnim
+      animation: myWorksAnim,
     });
   }
 
   myWorksIntroAnimation();
   //contact description animation
   function contactDescIntroAnimation() {
-    const contactDescSplit = new SplitType('.contact-description', { types: 'lines', lineClass: 'split-child' });
+    const contactDescSplit = new SplitType(".contact-description", {
+      types: "lines",
+      lineClass: "split-child",
+    });
 
     const contactDescAnim = gsap.timeline({ paused: true });
 
@@ -390,7 +406,7 @@ function runIntroAnimation() {
     ScrollTrigger.create({
       trigger: ".contact-description",
       start: "top center",
-      animation: contactDescAnim
+      animation: contactDescAnim,
     });
   }
   contactDescIntroAnimation();
@@ -399,7 +415,7 @@ function runIntroAnimation() {
 //move text on scroll
 function movetextOnScroll() {
   const moveTextAnim = gsap.timeline({
-    defaults: { ease: 'powe4.out' },
+    defaults: { ease: "powe4.out" },
     scrollTrigger: {
       trigger: "#scroll-container",
       start: "top top",
@@ -415,11 +431,3 @@ function movetextOnScroll() {
 }
 
 movetextOnScroll();
-
-
-
-
-
-
-
-
